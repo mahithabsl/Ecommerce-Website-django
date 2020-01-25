@@ -1,0 +1,27 @@
+$(document).on('submit','#signup',function(e) {
+	e.preventDefault();
+	$.ajax({
+		type:'POST',
+		url:'/signup/',
+		data:{
+			fname:$('#fname').val(),
+			mname:$('#mname').val(),
+			lname:$('#lname').val(),
+			gender:$('#gender').val(),
+			email:$('#email').val(),
+			username:$('#username').val(),
+			pass:$('#pass').val(),
+			phone:$('#phone').val(),
+			add1:$('#add1').val(),
+			add2:$('#add2').val(),
+			add3:$('#add3').val(),
+			pincode:$('#pincode').val(),
+			city:$('#city').val(),
+			state:$('#state').val(),
+			country:$('#country').val()
+		},
+		sucess:function(){
+			csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+		}
+	});
+});

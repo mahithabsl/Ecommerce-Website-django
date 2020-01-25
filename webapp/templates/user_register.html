@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+    {% include 'nav.html' %}
+<!-- nav bar close -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <form action="/login/" method="post">{% csrf_token %}
+    <div class="form-group row">
+      <label for="fname" class="col-sm-2 col-form-label">First Name :</label>
+      <div class="col-sm-10">
+        <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="mname" class="col-sm-2 col-form-label">Middle Name :</label>
+      <div class="col-sm-10">
+       <input type="text" name="mname" id="mname" class="form-control" placeholder="Middle Name" style="width: 100%;border-radius: 5px;">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lname" class="col-sm-2 col-form-label">Last Name :</label>
+      <div class="col-sm-10">
+       <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" style="width: 100%;border-radius: 5px;">
+      </div>
+    </div>
+    <fieldset class="form-group row">
+      <legend class="col-form-legend col-sm-2">Gender</legend>
+      <div class="col-sm-10">
+        <div class="form-check col-md-4">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="male" checked>
+            Male
+          </label>
+        </div>
+        <div class="form-check col-md-4">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="female">
+           Female
+          </label>
+        </div>
+        <div class="form-check-label">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gender" id="gridRadios3" value="other" >
+            Other
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">E-mail :</label>
+      <div class="col-sm-10">
+       <input type="email" name="email" id="lname" class="form-control" placeholder="E-mail" style="width: 100%;border-radius: 5px;">
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="username" class="col-sm-2 col-form-label">User Name :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="username" id="username" placeholder="User Name" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="pass" class="col-sm-2 col-form-label">Password :</label>
+      <div class="col-sm-10">
+      <input type="password" class="form-control" name="pass" id="pass" placeholder="Password " style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="phone" class="col-sm-2 col-form-label">PhoneNumber:</label>
+      <div class="col-sm-10">
+        <input type="number" name="phone" class="form-control" id="phone" placeholder="Mobile Number" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="add1" class="col-sm-2 col-form-label">Address 1 :</label>
+      <div class="col-sm-10">
+      <input type="text" name="add1" class="form-control" id="add1" placeholder="Address...." style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="add2" class="col-sm-2 col-form-label">Address 2 :</label>
+      <div class="col-sm-10">
+        <input type="text" name="add2" class="form-control" id="add2" placeholder="Address...." style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="add3" class="col-sm-2 col-form-label">Address 3 :</label>
+      <div class="col-sm-10">
+        <input type="text" name="add3" class="form-control" id="add3" placeholder="Address...." style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="pincode" class="col-sm-2 col-form-label">Pin code :</label>
+      <div class="col-sm-10">
+        <input type="number" name="pincode" class="form-control" id="pincode" placeholder="Pin Code" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="city" class="col-sm-2 col-form-label">City :</label>
+      <div class="col-sm-10">
+      <input type="text" name="city" class="form-control" id="city" placeholder="City" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="state" class="col-sm-2 col-form-label">Address 2 :</label>
+      <div class="col-sm-10">
+        <input type="text" name="state" class="form-control" id="state" placeholder="State" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="country" class="col-sm-2 col-form-label">Address 3 :</label>
+      <div class="col-sm-10">
+        <input type="text" name="country" class="form-control" id="country" placeholder="Country" style="width: 100%;border-radius: 5px;" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2">Checkbox</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" required> Check me out
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </div>
+  </form>
+  </div>
+    </div>
+</div>
+
+<!-- /.col -->
+           <center> <div class="col-md-12 end-box ">
+                &copy; 2018 | &nbsp; All Rights Reserved | &nbsp; www.mahishop.com | &nbsp; 24x7 support | &nbsp; Email us: bslmahitha@gmail.com
+            </div></center>
+
+<!-- User registration End -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="static/js/jquery-1.10.2.js"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="static/js/bootstrap.js"></script>
+    
+    <!--Main js file  -->
+    <script src="static/js/main.js"></script>
+    <!--Slider JavaScript file  -->
+
+    <script src="static/ItemSlider/js/modernizr.custom.63321.js"></script>
+    <script src="static/ItemSlider/js/jquery.catslider.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+        </script>
+
+
+</body>
+</html>

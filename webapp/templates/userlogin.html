@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+<body>
+
+<!-- nav bar close -->
+{% include "nav.html" %}
+ <div class="container" style="height: 500px;">
+        <form class="form-horizontal" role="form" method="POST" action="/login/">{% csrf_token %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <h2>Please Login</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label class="sr-only" for="email">E-Mail Address</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-at"></i></div>
+                            <input type="text" name="loginid" class="form-control" id="email"
+                                   placeholder="you@example.com" required autofocus>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                            <input type="password" name="loginpass" class="form-control" id="password"
+                                   placeholder="Password" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                        <!-- Put password error message here -->    
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-6" style="padding-top: .35rem">
+                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                        <label class="form-check-label">
+                            <span style="color: red;">{{Error}}</span>
+                            </label>
+                            <br>
+                            <label class="form-check-label">
+                            <input class="form-check-input" name="remember"
+                                   type="checkbox" >
+
+                            <span style="padding-bottom: .15rem">Remember me</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 1rem">
+                <div class="col-md-4"></div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
+                    <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+<!-- /.col -->
+           <center> <div class="col-md-12 end-box ">
+                &copy; 2018 | &nbsp; All Rights Reserved | &nbsp; www.mahishop.com | &nbsp; 24x7 support | &nbsp; Email us: bslmahitha@gmail.com
+            </div></center>
+
+<!-- User registration End -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    
+    <!--Main js file  -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!--Slider JavaScript file  -->
+
+    <script src="{% static 'ItemSlider/js/modernizr.custom.63321.js' %}"></script>
+    <script src="{% static 'ItemSlider/js/jquery.catslider.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+        </script>
+
+
+</body>
+</html>

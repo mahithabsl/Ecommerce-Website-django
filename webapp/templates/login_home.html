@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+	{% include 'header.html' %}
+</head>
+<body>
+	{% include 'user_header.html'%}
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="well well-lg offer-box text-center">
+
+
+                   Today's Offer : &nbsp; <span class="glyphicon glyphicon-cog"></span>&nbsp;40 % off  on purchase of $ 2,000 and above till 24 May !                
+              
+               
+                </div>
+                <div class="main box-border">
+                    <div id="mi-slider" class="mi-slider">
+                        <ul>
+                            {% for data in shoes %}
+                            <li><a href="">
+                                <img src="{{ data.product_img1.url }}" alt="img01"><h4>{{ data.product_name}}</h4>
+                            </a></li>
+                            {% endfor %}
+                        </ul>
+                        <ul>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/5.jpg' %}" alt="img05"><h4>Belts</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/6.jpg' %}" alt="img06"><h4>Hats &amp; Caps</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/7.jpg' %}" alt="img07"><h4>Sunglasses</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/8.jpg' %}" alt="img08"><h4>Scarves</h4>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            {% for wat in watch %}
+                            <li><a href="">
+                                <img src="{{ wat.product_img1.url }}" alt="img09"><h4>{{wat.product_name}}</h4>
+                            </a></li>
+                            {% endfor %}
+                            
+                        </ul>
+                        <ul>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/12.jpg' %}" alt="img12"><h4>Carry-Ons</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/13.jpg' %}" alt="img13"><h4>Duffel Bags</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/14.jpg' %}" alt="img14"><h4>Laptop Bags</h4>
+                            </a></li>
+                            <li><a href="">
+                                <img src="{% static 'ItemSlider/images/15.jpg' %}" alt="img15"><h4>Briefcases</h4>
+                            </a></li>
+                        </ul>
+                        <nav>
+                            <a href="">Shoes</a>
+                            <a href="">Accessories</a>
+                            <a href="">Watches</a>
+                            <a href="">Bags</a>
+                        </nav>
+                    </div>
+                    
+                </div>
+                <br />
+            </div>
+            <!-- /.col -->
+            
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <a href="" class="list-group-item active">Electronics
+                    </a>
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Mobile
+                    <span class="label label-primary pull-right">{{mobile_count}}</span>
+                        </li>
+                        <li class="list-group-item">Computers
+                      <span class="label label-success pull-right">34</span>
+                        </li>
+                        <li class="list-group-item">Tablets
+                         <span class="label label-danger pull-right">4</span>
+                        </li>
+                        <li class="list-group-item">Appliances
+                             <span class="label label-info pull-right">434</span>
+                        </li>
+                        <li class="list-group-item">Games &amp; Entertainment
+                             <span class="label label-success pull-right">34</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.div -->
+                <div>
+                    <a href="" class="list-group-item active list-group-item-success">Clothing & Wears
+                    </a>
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Men's Clothing
+                             <span class="label label-danger pull-right">{{men_count}}</span>
+                        </li>
+                        <li class="list-group-item">Women's Clothing
+                             <span class="label label-success pull-right">{{wemen_count}}</span>
+                        </li>
+                        <li class="list-group-item">Kid's Wear
+                             <span class="label label-info pull-right">{{kids_count}}</span>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.div -->
+                <div>
+                    <a href="" class="list-group-item active">Accessaries & Extras
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">Mobile Accessaries
+                             <span class="label label-warning pull-right">456</span>
+                        </li>
+                        <li class="list-group-item">Men's Accessaries
+                             <span class="label label-success pull-right">156</span>
+                        </li>
+                        <li class="list-group-item">Women's Accessaries
+                             <span class="label label-info pull-right">400</span>
+                        </li>
+                        <li class="list-group-item">Kid's Accessaries
+                             <span class="label label-primary pull-right">89</span>
+                        </li>
+                        <li class="list-group-item">Home Products
+                             <span class="label label-danger pull-right">90</span>
+                        </li>
+                        <li class="list-group-item">Kitchen Products
+                             <span class="label label-warning pull-right">567</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.div -->
+                <!-- /.div -->
+                
+                <!-- /.div -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">{{ mobile_pro }}</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                
+                <!-- /.row -->
+                <div class="row">
+                    {% for row in mobile %}
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="{{ row.product_img1.url }}" alt=""  />
+                            <div class="caption">
+                                <h3><a href="#">{{ row.product_name }} </a></h3>
+                                <p>Price :  <strong>Rs {{ row.product_price }}</strong>  </p>
+                                
+                                <p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="/productdetails/?product_id={{ row.product_id }}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <ul class="pagination alg-right-pad">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+                <!-- /.row -->
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li class="active">Men's Clothing</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-default"><strong>3005  </strong>items</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Sort Products &nbsp;
+                            <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">By Price Low</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Price High</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Popularity</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    {% for cloth in clothes%}
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="{{ cloth.product_img1.url}}" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">{{ cloth.product_name }}</a></h3>
+                                <p>Price : <strong>Rs {{ cloth.product_price }}</strong>  </p>
+                                
+                                    <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+                                    <a href="#" class="btn btn-primary" role="button">See Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <ul class="pagination alg-right-pad">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    
+    <!--Footer -->
+   
+            <!-- /.col -->
+           <center> <div class="col-md-12 end-box ">
+                &copy; 2018 | &nbsp; All Rights Reserved | &nbsp; www.mahishop.com | &nbsp; 24x7 support | &nbsp; Email us: bslmahitha@gmail.com
+            </div></center>
+<!-- User registration End -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    
+    <!--Main js file  -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!--Slider JavaScript file  -->
+
+    <script src="{% static 'ItemSlider/js/modernizr.custom.63321.js' %}"></script>
+    <script src="{% static 'ItemSlider/js/jquery.catslider.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+		</script>
+
+
+	
+</body>
+</html>
